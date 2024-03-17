@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/* font  */
+@import "./reset.css";
+@import "./pattern.css";
+:root {
+  --container-width: 45rem;
+  --radius: 8px;
+  /* colors  */
+  --title-gradient: linear-gradient(-45deg, #f17703, #f2ded2, #4329d5);
+  --light-gray: #444;
+  --bllury-gray: #444444b4;
+  --gray: #666;
+  --gray-alpha: hsla(0, 0%, 100%, 0.5);
+  --header-bg: rgba(0, 0, 0, 0.45);
+  --article-color: #eaeaea;
+  --fg: #fafbfc;
+  color-scheme: dark;
+}
+
+body {
+  /* background-color: black; */
+  font-family: "Inter", sans-serif;
+  /* color: white; */
+  overflow-y: scroll;
+}
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+/* theme  */
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+[data-color-scheme="light"] {
+  color-scheme: light;
+}
