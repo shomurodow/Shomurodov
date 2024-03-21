@@ -8,6 +8,13 @@ const routes = [
       return import("../views/Home.vue");
     },
   },
+  {
+    path: "/keyboards",
+    name: "keyboards",
+    component: function () {
+      return import("../views/Home.vue");
+    },
+  },
 ];
 
 const router = createRouter({

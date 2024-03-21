@@ -3,17 +3,29 @@
 @import "./reset.css";
 @import "./pattern.css";
 :root {
-  --container-width: 45rem;
+  /* Spacing  */
+  --gap-quarter: 0.25rem;
+  --gap-half: 0.5rem;
+  --gap: 1rem;
+  --gap-double: 2rem;
+  --small-gap: 4rem;
+  --big-gap: 4rem;
   --radius: 8px;
-  /* colors  */
+  --inline-radius: 5px;
+  --container-width: 45rem;
+  --padding: 0 20px;
+  /*Dark Mode Colors  */
   --title-gradient: linear-gradient(-45deg, #f17703, #f2ded2, #4329d5);
   --light-gray: #444;
+  --lighter-gray: #222;
+  --lightest-gray: #1a1a1a;
   --bllury-gray: #444444b4;
   --gray: #666;
   --gray-alpha: hsla(0, 0%, 100%, 0.5);
   --header-bg: rgba(0, 0, 0, 0.45);
   --article-color: #eaeaea;
   --fg: #fafbfc;
+  --bg: #000000;
   color-scheme: dark;
 }
 
@@ -36,8 +48,13 @@ body {
 /* theme  */
 [data-color-scheme="dark"] {
   color-scheme: dark;
+  background: black;
 }
 
 [data-color-scheme="light"] {
   color-scheme: light;
+}
+::selection {
+  color: black;
+  background: white;
 }

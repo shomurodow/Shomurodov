@@ -1,15 +1,77 @@
 <template>
+  <Transition>
+    <Command :showCommand="show" :commandRemove="removeCommand" />
+  </Transition>
   <header class="header">
     <div class="container">
       <a href="#!" class="header__logo"><img src="/img/logo.svg" /></a>
-      <button class="header__command">
+      <button class="header__command" @click="show = true">
         <img src="/img/icons/command-icon.svg" />
       </button>
-      <span class="header__title">Home</span>
+      <span class="header__title">{{ currentRouteName }}</span>
     </div>
   </header>
 </template>
+<script>
+import Command from "@/components/Command.vue";
+export default {
+  components: {
+    Command,
+  },
+  data() {
+    return {
+      command: false,
+      show: false,
+      scrollEnabled: true,
+      scrollPosition: 0,
+    };
+  },
+  mounted() {
+    window.addEventListener("keydown", this.handleKeyDown);
+  },
+
+  methods: {
+    // openCommand() {
+    //   let body = document.querySelector("body");
+    //   if ((this.show = true)) {
+    //     body.style.overflowY = "hidden";
+    //   }
+    // },
+    removeCommand() {
+      this.show = false;
+    },
+    handleKeyDown(event) {
+      if (event.key === "g") {
+        this.waitingForKeyG = true;
+      } else if (this.waitingForKeyG) {
+        if (event.key === "h") {
+          this.$router.push("/");
+        } else if (event.key === "c") {
+          this.$router.push("/contact");
+        } else if (event.key === "b") {
+          this.$router.push("/blog");
+        }
+        this.waitingForKeyG = false;
+      }
+    },
+  },
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    },
+  },
+};
+</script>
 <style>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.2s ease !important;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 .header {
   margin: 60px 0;
   padding: 10px 0;
@@ -31,18 +93,23 @@
   background: var(--bllury-gray);
   border-radius: var(--radius);
 }
-.header__command img,
 .header__logo img {
-  width: 35px;
+  width: 38px;
 }
+.header__command img {
+  width: 41px;
+}
+
 .header__command:hover,
 .header__logo:hover {
   background-color: var(--light-gray);
 }
 .header__title {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+
   font-size: 16px;
   color: var(--gray-alpha);
+  text-transform: capitalize;
 }
 /* header animation  */
 @keyframes header-animation {
