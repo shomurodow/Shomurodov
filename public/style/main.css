@@ -4,6 +4,7 @@
 @import "./pattern.css";
 :root {
   /* Spacing  */
+
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
   --gap: 1rem;

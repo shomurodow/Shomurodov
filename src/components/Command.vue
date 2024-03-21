@@ -148,6 +148,8 @@ export default {
 </script>
 
 <style scoped>
+/* responsive  */
+
 .command {
   position: fixed;
   top: 0;
@@ -257,5 +259,11 @@ export default {
   left: 0;
   --overlay: rgba(0, 0, 0, 0.6);
   background: var(--overlay);
+}
+@media (max-width: 960px) {
+  .command__wrapper {
+    top: 140px !important;
+    border-radius: 15px !important;
+  }
 }
 </style>

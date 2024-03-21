@@ -120,4 +120,11 @@ export default {
     background-position: -1512px -1512px;
   }
 }
+
+/* responsive  */
+@media (max-width: 960px) {
+  .header {
+    margin: var(--gap-double) 0;
+  }
+}
 </style>
