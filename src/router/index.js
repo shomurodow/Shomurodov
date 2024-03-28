@@ -9,10 +9,10 @@ const routes = [
     },
   },
   {
-    path: "/keyboards",
-    name: "keyboards",
+    path: "/music",
+    name: "music",
     component: function () {
-      return import("../views/Home.vue");
+      return import("../views/Music.vue");
     },
   },
 ];

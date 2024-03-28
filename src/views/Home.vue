@@ -18,8 +18,11 @@
   </div>
 </template>
 <style scoped>
+.home {
+  padding-bottom: var(--small-gap);
+}
 .home__title {
-  font-size: 40px;
+  font-size: var(--fontsize-big);
   font-weight: 600;
   background: var(--title-gradient);
   background-size: 300%;

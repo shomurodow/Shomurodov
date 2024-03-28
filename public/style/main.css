@@ -4,7 +4,6 @@
 @import "./pattern.css";
 :root {
   /* Spacing  */
-
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
   --gap: 1rem;
@@ -15,6 +14,7 @@
   --inline-radius: 5px;
   --container-width: 45rem;
   --padding: 0 20px;
+  --fontsize-big: 40px;
   /*Dark Mode Colors  */
   --title-gradient: linear-gradient(-45deg, #f17703, #f2ded2, #4329d5);
   --light-gray: #444;
