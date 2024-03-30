@@ -83,10 +83,11 @@ export default {
   left: 0;
   right: 0;
   top: 0;
+  transition: all 0.3s ease-in;
 }
 .card:hover::before {
-  background: rgba(0, 0, 0, 0.3);
   transition: background 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .card:hover .card__text {

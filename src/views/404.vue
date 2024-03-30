@@ -1,0 +1,12 @@
+<template>
+  <div class="container">
+    <h1>This page cannot be found.</h1>
+  </div>
+</template>
+
+<style scoped>
+.container h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+</style>

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-
+import notFound from "@/views/404.vue";
 const routes = [
   {
     path: "/",
@@ -14,6 +14,11 @@ const routes = [
     component: function () {
       return import("../views/Music.vue");
     },
+  },
+  {
+    path: "/:404",
+    name: "404",
+    component: notFound,
   },
 ];
 

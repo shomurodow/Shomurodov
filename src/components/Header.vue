@@ -31,12 +31,6 @@ export default {
   },
 
   methods: {
-    // openCommand() {
-    //   let body = document.querySelector("body");
-    //   if ((this.show = true)) {
-    //     body.style.overflowY = "hidden";
-    //   }
-    // },
     removeCommand() {
       this.show = false;
     },
@@ -50,6 +44,8 @@ export default {
           this.$router.push("/contact");
         } else if (event.key === "b") {
           this.$router.push("/blog");
+        } else if (event.key === "m") {
+          this.$router.push("/music");
         }
         this.waitingForKeyG = false;
       }
