@@ -1,20 +1,30 @@
 import { createRouter, createWebHistory } from "vue-router";
-import notFound from "@/views/404.vue";
+import notFound from "@/pages/404.vue";
 const routes = [
+  // navigation
   {
     path: "/",
     name: "home",
     component: function () {
-      return import("../views/Home.vue");
+      return import("../pages/Home.vue");
     },
   },
+  {
+    path: "/portfolio",
+    name: "portfolio",
+    component: function () {
+      return import("../pages/Portfolio.vue");
+    },
+  },
+  // collection
   {
     path: "/music",
     name: "music",
     component: function () {
-      return import("../views/Music.vue");
+      return import("../pages/Music.vue");
     },
   },
+  // 404 page
   {
     path: "/:404",
     name: "404",

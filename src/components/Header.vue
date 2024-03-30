@@ -69,11 +69,15 @@ export default {
   opacity: 0;
 }
 .header {
+  padding: var(--gap) 0;
+  position: sticky;
+  top: 0;
   margin: 60px 0;
   padding: 10px 0;
   background: var(--pattern);
   backdrop-filter: saturate(180%) blur(20px);
   animation: header-animation 80s linear infinite;
+  z-index: 100;
 }
 .header .container {
   display: flex;

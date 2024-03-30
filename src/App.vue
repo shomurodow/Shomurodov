@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <Header />
+  <Header />
+  <div class="content">
+    <router-view />
   </div>
-  <router-view />
 </template>
 <script>
 import Command from "./components/Command.vue";
