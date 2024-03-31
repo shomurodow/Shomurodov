@@ -46,6 +46,8 @@ export default {
           this.$router.push("/blog");
         } else if (event.key === "m") {
           this.$router.push("/music");
+        } else if (event.key === "p") {
+          this.$router.push("/portfolio");
         }
         this.waitingForKeyG = false;
       }
