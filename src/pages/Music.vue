@@ -25,29 +25,40 @@
 export default {
   data() {
     return {
-      musics: [
-        {
-          title: "Something Comforting",
-          desc: "Porter Robinson (Official Music Video)",
-          bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2F-C-2AqRD8io%2Fmaxresdefault.jpg",
-        },
-        {
-          title: "Fullmoon Lullaby",
-          desc: "Porter Robinson (Official Music Video)",
-          bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
-        },
-        {
-          title: "Something Comforting",
-          desc: "Porter Robinson (Official Music Video)",
-          bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
-        },
-        {
-          title: "Something Comforting",
-          desc: "Porter Robinson (Official Music Video)",
-          bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
-        },
-      ],
+      musics: null,
+      // musics: [
+      //   {
+      //     title: "Something Comforting",
+      //     desc: "Porter Robinson (Official Music Video)",
+      //     bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2F-C-2AqRD8io%2Fmaxresdefault.jpg",
+      //   },
+      //   {
+      //     title: "Fullmoon Lullaby",
+      //     desc: "Porter Robinson (Official Music Video)",
+      //     bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
+      //   },
+      //   {
+      //     title: "Something Comforting",
+      //     desc: "Porter Robinson (Official Music Video)",
+      //     bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
+      //   },
+      //   {
+      //     title: "Something Comforting",
+      //     desc: "Porter Robinson (Official Music Video)",
+      //     bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
+      //   },
+      // ],
     };
+  },
+  mounted() {
+    this.axios
+      .get("https://2cc35bda72c1d315.mokky.dev/music")
+      .then((res) => {
+        this.musics = res.data;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 };
 </script>

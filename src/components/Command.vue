@@ -21,7 +21,7 @@
               <router-link
                 :to="listItem.path"
                 class="list__link"
-                :target="listItem.target"
+                @click="commandRemove"
               >
                 <div class="list__right">
                   <div class="list__icon">
