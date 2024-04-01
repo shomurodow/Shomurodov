@@ -22,42 +22,22 @@
 </template>
 
 <script>
+import { mainKey } from "@/assets/api.js";
 export default {
   data() {
     return {
       musics: null,
-      // musics: [
-      //   {
-      //     title: "Something Comforting",
-      //     desc: "Porter Robinson (Official Music Video)",
-      //     bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2F-C-2AqRD8io%2Fmaxresdefault.jpg",
-      //   },
-      //   {
-      //     title: "Fullmoon Lullaby",
-      //     desc: "Porter Robinson (Official Music Video)",
-      //     bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
-      //   },
-      //   {
-      //     title: "Something Comforting",
-      //     desc: "Porter Robinson (Official Music Video)",
-      //     bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
-      //   },
-      //   {
-      //     title: "Something Comforting",
-      //     desc: "Porter Robinson (Official Music Video)",
-      //     bg: "https://res.cloudinary.com/dsdlhtnpw/image/fetch/q_60,w_1000/https%3A%2F%2Fi.ytimg.com%2Fvi%2FC39xz8IZ9Fs%2Fmaxresdefault.jpg",
-      //   },
-      // ],
+      key: mainKey,
     };
   },
   mounted() {
     this.axios
-      .get("https://2cc35bda72c1d315.mokky.dev/music")
+      .get(`https://${this.key}.mokky.dev` + "/music")
       .then((res) => {
         this.musics = res.data;
       })
       .catch((err) => {
-        console.log(err);
+        console.log("nimadir xato buvoti", err);
       });
   },
 };
@@ -78,7 +58,6 @@ export default {
 .card {
   width: 100%;
   height: 224px;
-  background-image: url();
   background-size: cover;
   background-position: center;
   border-radius: var(--radius);
@@ -98,7 +77,7 @@ export default {
 }
 .card:hover::before {
   transition: background 0.3s ease-in-out;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.678);
 }
 
 .card:hover .card__text {
@@ -107,6 +86,7 @@ export default {
 }
 .card__text {
   position: absolute;
+  right: 2rem;
   left: 2rem;
   bottom: 2rem;
   z-index: 2;
@@ -116,6 +96,11 @@ export default {
 }
 
 .card__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* font style  */
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: var(--gap);
@@ -125,5 +110,14 @@ export default {
   font-size: 1.125rem;
   font-size: 500;
   color: #eaeaea;
+}
+@media (max-width: 730px) {
+  .card__text {
+    left: 1rem;
+    right: 1rem;
+  }
+  .card__title {
+    margin-bottom: unset;
+  }
 }
 </style>

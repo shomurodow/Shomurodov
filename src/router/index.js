@@ -30,6 +30,14 @@ const routes = [
     name: "404",
     component: notFound,
   },
+  // admin panel test
+  {
+    path: "/musicedit",
+    name: "music edit",
+    component: function () {
+      return import("../pages/admin/musicEdit.vue");
+    },
+  },
 ];
 
 const router = createRouter({
