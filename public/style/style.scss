@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+h1 {
+  font-family: "shomurodov's death";
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 120px;
+}
+
+.container {
+  max-width: 990px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+// background
+
+// header
+.header {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  &__logo {
+    text-align: center;
+  }
+  &__socials {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    &-item {
+      display: flex;
+      align-items: center;
+      color: white;
+      //   font
+      font-family: "shomurodov's death";
+      font-size: 70px;
+      line-height: 70px;
+      a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: white;
+        svg {
+          width: 35px;
+          height: 35px;
+          margin-top: 1px;
+          g {
+            path {
+              fill: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  h1 {
+    font-size: 150px;
+    line-height: 110px;
+  }
+  .header {
+    &__socials {
+      margin-top: 0;
+      &-item {
+        font-size: 70px;
+        line-height: 70px;
+        a {
+          width: 40px;
+          height: 40px;
+          svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 130px;
+    line-height: 100px;
+  }
+  .header {
+    &__socials {
+      &-item {
+        font-size: 60px;
+        line-height: 70px;
+        a {
+          width: 35px;
+          height: 35px;
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 100px;
+    line-height: 70px;
+  }
+  .header {
+    &__socials {
+      &-item {
+        font-size: 60px;
+        line-height: 70px;
+        a {
+          width: 30px;
+          height: 30px;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 90px;
+    line-height: 55px;
+  }
+  .header {
+    &__socials {
+      &-item {
+        font-size: 60px;
+        line-height: 70px;
+        a {
+          width: 30px;
+          height: 30px;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
