@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+/* fonts  */
+body {
+        background: black;
+        color: white;
+}
+/* text  */
+
+h1 {
+        font-family: "Unbounded";
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 43.4px;
+        
+}
+
+/* blur */
+.bg-blur{
+        background: #FFFFFF03;
+        backdrop-filter: blur(0.2vw);
+        border: 1px solid white;
+        border-radius: 20px;
+}
