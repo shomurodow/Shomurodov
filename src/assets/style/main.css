@@ -7,10 +7,9 @@ body {
 /* text  */
 
 h1 {
+        @apply text-[2.3vw] leading-[2.4vw];
         font-family: "Unbounded";
         font-weight: 500;
-        font-size: 35px;
-        line-height: 43.4px;
         
 }
 
@@ -20,4 +19,12 @@ h1 {
         backdrop-filter: blur(0.2vw);
         border: 1px solid white;
         border-radius: 20px;
+}
+
+/* buttons  */
+.btn {
+        @apply w-full;
+}
+.btn-white {
+
 }
