@@ -8,23 +8,37 @@
         }
 
         const projects = ref([
-                {
+                {       id: 1,
                         title: "Spectra",
                         img: "/images/projects/1.jpg"
                 },
                 {
+                        id: 2,
                         title: "Expressimo",
                         img: "/images/projects/1.jpg"
                 },
                 {
+                        id: 3,
                         title: "Back to business",
                         img: "/images/projects/1.jpg"
                 },
                 {
+                        id: 4,
                         title: "Enki Beton",
                         img: "/images/projects/1.jpg"
                 },
                 {
+                        id: 5,
+                        title: "Beton Zavod",
+                        img: "/images/projects/1.jpg"
+                },
+                {
+                        id: 6,
+                        title: "Beton Zavod",
+                        img: "/images/projects/1.jpg"
+                },
+                {
+                        id: 7,
                         title: "Beton Zavod",
                         img: "/images/projects/1.jpg"
                 },
@@ -40,7 +54,7 @@
                 </div>
                 <!-- cards -->
                 <div class="cards">
-                        <div v-for="(item,index) of projects" :key="index" class="card border-[0.052vw] rounded-[1.042vw] overflow-hidden relative">
+                        <div  v-for="(item, index) in projects.slice(0,5)" :key="index" class="card border-[0.052vw] rounded-[1.042vw] overflow-hidden relative">
                                 <div class="w-full h-full absolute top-0 left-0 bg-[#00000080]"></div>
                                 <img src="/images/projects/1.webp" class="w-full h-full" alt="image" loading="lazy">
                                 <div class="card-bottom absolute top-[1.042vw] left-[1.042vw] right-[1.042vw] bottom-[1.042vw] z-10 flex justify-between items-end">
