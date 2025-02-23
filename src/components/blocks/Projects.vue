@@ -13,7 +13,7 @@
                         <h1>последние работы</h1>
                 </div>
                 <div class="mt-[45px]">
-                        <Button text="последние работы" color="white" :func="projects" icon="/images/icons/arrow-right.svg"/>
+                        <Button text="последние работы" color="white" icon="/images/icons/arrow-right.svg"/>
                 </div>
         </section>
 </template>

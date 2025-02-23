@@ -9,5 +9,5 @@
 </script>
 
 <template>
-        <button class="btn" :class="`btn-${color}`" @click="func">{{ text }} <img :src="icon" alt="icon"></button>
+        <button class="btn" :class="`btn-${color}`">{{ text }} <img :src="icon" alt="icon"></button>
 </template>

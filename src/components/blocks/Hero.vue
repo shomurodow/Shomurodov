@@ -2,11 +2,6 @@
 import Button from "@/components/Button.vue"
 
 
-const AlertFunc = () => {
-        alert(1)
-}
-
-
 </script>
 
 <template>
@@ -36,7 +31,7 @@ const AlertFunc = () => {
                                         </div>
                                         <div class="w-full">
                                                 <!-- hero buttons  -->
-                                                <Button class="mt-[3.5vw]" text="посмотреть работы" color="white" :func="AlertFunc" icon="/images/icons/arrow-down.svg"/>
+                                                <Button class="mt-[3.5vw]" text="посмотреть работы" color="white" icon="/images/icons/arrow-down.svg"/>
                                         </div>
                                 </div>
                         </div>
