@@ -7,24 +7,36 @@ body {
 /* text  */
 
 h1 {
-        @apply text-[2.3vw] leading-[2.4vw];
-        font-family: "Unbounded";
-        font-weight: 500;
+        @apply font-[Unbounded] font-[500] text-[2.3vw] leading-[2.4vw];
         
 }
 
 /* blur */
 .bg-blur{
-        background: #FFFFFF03;
-        backdrop-filter: blur(0.2vw);
-        border: 1px solid white;
-        border-radius: 20px;
+        @apply bg-[#FFFFFF03] backdrop-blur-[0.2vw] border-[0.052vw] border-white rounded-[1.042vw];
 }
 
 /* buttons  */
 .btn {
-        @apply w-full;
+        @apply w-full h-[3.6vw] flex items-center justify-center gap-[0.521vw] rounded-[1.042vw] font-[Unbounded] font-medium text-[0.8vw] text-black;
 }
-.btn-white {
+.btn img {
+        @apply w-[0.521vw] h-[0.625vw]
+}
 
+.btn-white {
+        @apply bg-white text-black;
+}
+
+
+/* container  */
+
+.container{
+        @apply max-w-[70vw] mx-auto p-[1.823vw]; 
+}
+
+/* section title  */
+
+.section-title {
+        @apply mb-[1.042vw];
 }
