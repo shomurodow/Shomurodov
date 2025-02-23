@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import Button from "@/components/Button.vue"
+
+
+const AlertFunc = () => {
+        alert(1)
+}
+
+
 </script>
 
 <template>
@@ -8,11 +15,11 @@ import Button from "@/components/Button.vue"
                         <img src="/images/hero.webp" alt="hero" class="w-full h-auto">
                 </div>
                 <div class="hero-blur bg-blur">
-                        <div class="max-w-[70vw] h-full flex items-end p-[1.5vw] mx-auto">
+                        <div class="container h-full flex items-end">
                                 <div class="w-full">
                                         <div class="flex justify-end">
                                                 <div class="w-[35vw]">
-                                                        <ul class="hero-list flex gap-[2vw] font-[Montserrat] text-[0.8vw] font-medium list-disc">
+                                                        <ul class="hero-list flex gap-[2vw] font-[Montserrat] text-[0.8vw] text-[#FFFFFF80] leading-[0.9vw] font-medium list-disc">
                                                                 <li class="ml-[0.9vw]">web-developer</li>
                                                                 <li>web-designer</li>
                                                         </ul>
@@ -29,7 +36,7 @@ import Button from "@/components/Button.vue"
                                         </div>
                                         <div class="w-full">
                                                 <!-- hero buttons  -->
-                                                <Button class="mt-[3.5vw]"/>
+                                                <Button class="mt-[3.5vw]" text="посмотреть работы" color="white" :func="AlertFunc" icon="/images/icons/arrow-down.svg"/>
                                         </div>
                                 </div>
                         </div>
@@ -40,22 +47,10 @@ import Button from "@/components/Button.vue"
 
 <style>
         .hero-blur {
-                width: calc(100% - 80px);
-                height: calc(100vh - 80px); 
+                width: calc(100% - 4vw);
+                height: calc(100% - 4vw);
         }
         .hero-img {
-                height: 100%;
-                /* height: calc(100vh - 80px);  */
-        }
-        .hero-text h1{
-                font-size: 2.3vw;
-                line-height: 2.4vw;
-        }
-        /* hero list */
-        .hero-list{
-                /* font-weight: 600; */
-                /* font-size: 14px; */
-                line-height: 17.07px;
-                color: #FFFFFF80;  
+                @apply h-full;
         }
 </style>
