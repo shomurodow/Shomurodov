@@ -1,3 +1,13 @@
+<script setup lang="ts">
+        const props = defineProps({
+                text: String,
+                color: String,
+                func: Function,
+                icon: String
+        })
+        console.log(props.color);
+</script>
+
 <template>
-        <button class="w-full h-[3.6vw] bg-white rounded-[20px] font-[Unbounded] text-[0.8vw] font-medium text-black">посмотреть работы</button>
+        <button class="btn" :class="`btn-${color}`" @click="func">{{ text }} <img :src="icon" alt="icon"></button>
 </template>
